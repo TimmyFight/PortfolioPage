@@ -1,5 +1,13 @@
+import Logo from "../../Molecules/Logo/Logo";
+import Menu from "../../Molecules/Menu/Menu";
+
 const NavBar = () => {
-  return <div>NavBar</div>;
+  return (
+    <nav className="flex justify-between items-center relative z-30 p-5">
+      <Logo />
+      <Menu />
+    </nav>
+  );
 };
 
 export default NavBar;
