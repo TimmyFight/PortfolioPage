@@ -12,7 +12,7 @@ const MenuPosition = ({ item }: MenuPositionProperties) => {
     <li>
       <Link
         href={item.href}
-        className="flex justify-center items-center cursor-pointer pb-1.5 transition-all hover:font-bold">
+        className="flex justify-center items-center cursor-pointer pb-1.5 transition-all font-bold hover:underline underline-offset-4 text-emerald-500">
         {item.name}
       </Link>
     </li>
