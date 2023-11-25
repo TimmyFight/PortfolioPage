@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from "@/components/Organisms/NavBar/NavBar";
-import MainFooter from "@/components/Organisms/MainFooter/MainFooter";
+import NavBar from "./components/Organisms/NavBar/NavBar";
+import MainFooter from "./components/Organisms/MainFooter/MainFooter";
 
 export const metadata: Metadata = {
   title: "Adrian Ciołkiewicz - Frontend Devweloper",
