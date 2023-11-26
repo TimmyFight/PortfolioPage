@@ -19,7 +19,6 @@ export default function RootLayout({
       <body>
         <NavBar />
         <main className="relative overflow-hidden">{children}</main>
-        <MainFooter />
       </body>
     </html>
   );
