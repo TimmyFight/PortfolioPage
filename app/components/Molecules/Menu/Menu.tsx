@@ -1,17 +1,25 @@
-import MenuPosition from "../../Atoms/MenuPosition/MenuPosition";
-import MenuIcon from "@mui/icons-material/Menu";
+"use client";
+
+import { useEffect, useState } from "react";
+import MenuItem from "../../Atoms/MenuItem/MenuItem";
 import { MAIN_MENU_ITEMS } from "@/constants";
 
-interface MenuProperties {
-  menuItems: { name: string; href: string }[];
-}
-
 const Menu = () => {
+  const [activeLink, setActiveLink] = useState("");
+  useEffect(() => {
+    const hash = window.location.hash;
+    hash ? setActiveLink(`./${hash}`) : setActiveLink("./#about");
+  }, []);
   return (
     <nav>
       <ul className="flex flex-col align-start gap-4">
         {MAIN_MENU_ITEMS.map((item) => (
-          <MenuPosition key={item.name} item={item} />
+          <MenuItem
+            key={item.name}
+            item={item}
+            activeLink={activeLink}
+            setActiveLink={setActiveLink}
+          />
         ))}
       </ul>
     </nav>

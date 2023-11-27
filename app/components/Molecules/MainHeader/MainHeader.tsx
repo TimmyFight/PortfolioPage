@@ -2,7 +2,7 @@ import Link from "next/link";
 import Headings from "../../Atoms/Headings/Headings";
 import Typography from "../../Atoms/Typography/Typography";
 
-const Logo = () => {
+const MainHeader = () => {
   return (
     <header>
       <Link href="/">
@@ -13,11 +13,11 @@ const Logo = () => {
       <Headings level={2} customClass="font-bold text-xl">
         <>Frontend Developer</>
       </Headings>
-      <Typography customClass="pt-2">
+      <Typography customClass="pt-2 text-emerald-700">
         Web application development is my primary focus.
       </Typography>
     </header>
   );
 };
 
-export default Logo;
+export default MainHeader;
