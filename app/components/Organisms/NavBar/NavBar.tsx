@@ -4,13 +4,13 @@ import MainFooter from "../MainFooter/MainFooter";
 
 const NavBar = () => {
   return (
-    <>
-      <nav className="flex justify-between items-center relative z-30 p-5 bg-neutral-900">
+    <section className="flex flex-col justify-start items-center relative z-30 p-16 bg-neutral-900 h-screen text-emerald-500">
+      <section className="flex flex-col items-start gap-12">
         <Logo />
         <Menu />
-      </nav>
+      </section>
       <MainFooter />
-    </>
+    </section>
   );
 };
 

@@ -4,11 +4,11 @@ import Link from "next/link";
 
 const MainFooter = () => {
   return (
-    <footer className="flex justify-center items-center relative bottom-0 z-30 p-5 bg-neutral-900">
+    <footer className="flex items-center absolute bottom-10">
       {SOCIAL_ITEMS.map((social) => {
         return (
           <Link href={social.href} target="_blank">
-            <MenuIcon className="text-emerald-500" />
+            <MenuIcon />
           </Link>
         );
       })}

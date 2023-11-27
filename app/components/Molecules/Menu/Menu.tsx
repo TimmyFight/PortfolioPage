@@ -8,17 +8,13 @@ interface MenuProperties {
 
 const Menu = () => {
   return (
-    <>
-      <ul className="hidden h-full gap-12 lg:flex">
+    <nav>
+      <ul className="flex flex-col align-start gap-4">
         {MAIN_MENU_ITEMS.map((item) => (
           <MenuPosition key={item.name} item={item} />
         ))}
       </ul>
-
-      <div className="inline-block cursor-pointer lg:hidden">
-        <MenuIcon className="text-emerald-500" />
-      </div>
-    </>
+    </nav>
   );
 };
 

@@ -16,9 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex">
         <NavBar />
-        <main className="relative overflow-hidden">{children}</main>
+        <main className="relative">{children}</main>
       </body>
     </html>
   );
