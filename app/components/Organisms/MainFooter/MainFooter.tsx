@@ -1,4 +1,5 @@
-import MenuIcon from "@mui/icons-material/Menu";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { SOCIAL_ITEMS } from "@/constants";
 import Link from "next/link";
 
@@ -8,7 +9,8 @@ const MainFooter = () => {
       {SOCIAL_ITEMS.map((social) => {
         return (
           <Link href={social.href} target="_blank">
-            <MenuIcon />
+            {social.name === "GitHub" && <GitHubIcon />}
+            {social.name === "LinkedIn" && <LinkedInIcon />}
           </Link>
         );
       })}
