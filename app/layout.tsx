@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/Organisms/NavBar/NavBar";
-import MainFooter from "./components/Organisms/MainFooter/MainFooter";
+
+const robotoSlab = Roboto_Slab({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Adrian Ciołkiewicz - Frontend Devweloper",
@@ -16,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex">
+      <body className={`flex ${robotoSlab.className}`}>
         <NavBar />
         <main className="relative">{children}</main>
       </body>
