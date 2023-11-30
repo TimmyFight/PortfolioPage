@@ -4,7 +4,11 @@ interface TypographyProperties {
 }
 
 const Typography = ({ children, customClass }: TypographyProperties) => {
-  return <p className={customClass}>{children}</p>;
+  return (
+    <p data-testid="typography" className={customClass}>
+      {children}
+    </p>
+  );
 };
 
 Typography.defaultProps = {

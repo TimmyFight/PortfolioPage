@@ -11,12 +11,13 @@ describe("Headings", () => {
   });
   it("The Headings rendered with a specific properties", () => {
     render(
-      <Headings level={3}>
+      <Headings level={3} customClass="testClass">
         <>Test H3</>
       </Headings>
     );
     const heading = screen.getByTestId("heading");
     expect(heading.tagName).toBe("H3");
+    expect(heading.className).toBe("testClass");
     expect(heading.textContent).toBe("Test H3");
   });
 });
