@@ -4,7 +4,7 @@ import Typography from "../../Atoms/Typography/Typography";
 
 const MainHeader = () => {
   return (
-    <header>
+    <header data-testid="mainHeader">
       <Link href="/">
         <Headings level={1} customClass="font-bold text-4xl">
           <>Adrian Ciołkiewicz</>

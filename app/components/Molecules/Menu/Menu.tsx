@@ -11,7 +11,7 @@ const Menu = () => {
     hash ? setActiveLink(`./${hash}`) : setActiveLink("./#about");
   }, []);
   return (
-    <nav>
+    <nav data-testid="menu">
       <ul className="flex flex-col align-start gap-4">
         {MAIN_MENU_ITEMS.map((item) => (
           <MenuItem
