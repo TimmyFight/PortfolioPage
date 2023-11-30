@@ -15,6 +15,7 @@ const MenuItem = ({ item, activeLink, setActiveLink }: MenuItemProperties) => {
   return (
     <li>
       <Link
+        data-testid="menuItem"
         href={item.href}
         className={`flex items-strat cursor-pointer transition-all font-bold underline-offset-4 hover:underline hover:text-emerald-500 ${
           activeLink === item.href
