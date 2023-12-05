@@ -1,25 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import MenuItem from "../../Atoms/MenuItem/MenuItem";
 import { MAIN_MENU_ITEMS } from "@/constants";
+import { useDispatch } from "react-redux";
+import { setActiveLink } from "@/lib/services/activeLinkSlice";
 
 const Menu = () => {
-  const [activeLink, setActiveLink] = useState("");
-  useEffect(() => {
-    const hash = window.location.hash;
-    hash ? setActiveLink(`./${hash}`) : setActiveLink("./#about");
-  }, []);
+  const dispatch = useDispatch();
+  const hash = window.location.hash;
+  hash
+    ? dispatch(setActiveLink(`./${hash}`))
+    : dispatch(setActiveLink("./#about"));
+
   return (
     <nav data-testid="menu">
       <ul className="flex flex-col align-start gap-4">
         {MAIN_MENU_ITEMS.map((item) => (
-          <MenuItem
-            key={item.name}
-            item={item}
-            activeLink={activeLink}
-            setActiveLink={setActiveLink}
-          />
+          <MenuItem key={item.name} item={item} />
         ))}
       </ul>
     </nav>

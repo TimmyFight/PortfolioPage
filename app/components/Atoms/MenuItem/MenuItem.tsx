@@ -1,17 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import { useSelector, useDispatch } from "react-redux";
+import { setActiveLink } from "@/lib/services/activeLinkSlice";
+import { RootState } from "@/lib/services/store";
 
 interface MenuItemProperties {
   item: {
     name: string;
     href: string;
   };
-  activeLink: string;
-  setActiveLink(clickedLink: string): void;
 }
 
-const MenuItem = ({ item, activeLink, setActiveLink }: MenuItemProperties) => {
+const MenuItem = ({ item }: MenuItemProperties) => {
+  const dispatch = useDispatch();
+  const activeLink = useSelector((state: RootState) => state.activeLink);
   return (
     <li>
       <Link
@@ -22,7 +25,7 @@ const MenuItem = ({ item, activeLink, setActiveLink }: MenuItemProperties) => {
             ? "underline text-emerald-500"
             : "text-emerald-700"
         }`}
-        onClick={() => setActiveLink(`${item.href}`)}>
+        onClick={() => dispatch(setActiveLink(`${item.href}`))}>
         {item.name}
       </Link>
     </li>

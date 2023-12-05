@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/Organisms/NavBar/NavBar";
+import StoreProvider from "@/lib/services/StoreProvider";
 
 const robotoSlab = Roboto_Slab({ subsets: ["latin"] });
 
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`flex ${robotoSlab.className}`}>
-        <NavBar />
-        <main className="relative">{children}</main>
+        <StoreProvider>
+          <NavBar />
+          <main className="relative">{children}</main>
+        </StoreProvider>
       </body>
     </html>
   );
