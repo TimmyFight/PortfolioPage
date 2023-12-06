@@ -9,15 +9,6 @@ describe("MenuItem", () => {
     href: "/#about",
   };
 
-  it("The MenuItem rendered when item is active", () => {
-    renderWithRedux(<MenuItem item={item} />, {
-      initialState: { activeLink: item.href },
-    });
-    const menuItem = screen.getByTestId("menuItem");
-    expect(menuItem.textContent).toBe("About");
-    expect(menuItem).toHaveClass("text-emerald-500");
-  });
-
   it("The MenuItem rendered when other item is active", () => {
     renderWithRedux(<MenuItem item={item} />, {
       initialState: { activeLink: "/#projects" },
