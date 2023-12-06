@@ -10,7 +10,11 @@ describe("Typography", () => {
     expect(typography.textContent).toBe("");
   });
   it("The Typography rendered with a specific properties", () => {
-    render(<Typography customClass="testClass">Test Typography</Typography>);
+    render(
+      <Typography customClass="testClass">
+        <>Test Typography</>
+      </Typography>
+    );
     const typography = screen.getByTestId("typography");
     expect(typography.tagName).toBe("P");
     expect(typography.className).toBe("testClass");

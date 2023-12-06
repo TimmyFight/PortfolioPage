@@ -1,5 +1,5 @@
 interface TypographyProperties {
-  children?: string;
+  children?: JSX.Element;
   customClass?: string;
 }
 

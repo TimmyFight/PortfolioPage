@@ -7,7 +7,7 @@ import { setActiveLink } from "@/lib/services/activeLinkSlice";
 
 const Menu = () => {
   const dispatch = useDispatch();
-  const hash = window.location.hash;
+  const hash = typeof window !== "undefined" ? window.location.hash : "";
   hash
     ? dispatch(setActiveLink(`./${hash}`))
     : dispatch(setActiveLink("./#about"));

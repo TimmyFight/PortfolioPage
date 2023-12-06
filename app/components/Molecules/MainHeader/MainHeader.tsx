@@ -14,7 +14,7 @@ const MainHeader = () => {
         <>Frontend Developer</>
       </Headings>
       <Typography customClass="pt-2 text-emerald-700">
-        Web application development is my primary focus.
+        <>Web application development is my primary focus.</>
       </Typography>
     </header>
   );

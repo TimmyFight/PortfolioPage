@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={`flex ${robotoSlab.className}`}>
         <StoreProvider>
           <NavBar />
-          <main className="relative">{children}</main>
+          <main className="w-2/3 h-screen">{children}</main>
         </StoreProvider>
       </body>
     </html>
