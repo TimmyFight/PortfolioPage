@@ -2,6 +2,7 @@ export const MAIN_MENU_ITEMS = [
   { name: "// About", href: "./#about" },
   { name: "// Experience", href: "./#experience" },
   { name: "// Projects", href: "./#projects" },
+  { name: "// Articles", href: "./#articles" },
 ];
 
 export const SOCIAL_ITEMS = [
