@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 
 export const renderWithRedux = (
   ui: ReactElement,
-  { ...renderOptions } = {}
+  { initialState = { activeLink: "/#about" }, ...renderOptions } = {}
 ) => {
   function Wrapper({ children }: { children: ReactElement }) {
     return <StoreProvider>{children}</StoreProvider>;

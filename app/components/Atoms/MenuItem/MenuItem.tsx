@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { setActiveLink } from "@/lib/services/activeLinkSlice";
-import { RootState } from "@/lib/services/store";
+import { RootState } from "@/lib/services/StoreProvider";
 
 interface MenuItemProperties {
   item: {
