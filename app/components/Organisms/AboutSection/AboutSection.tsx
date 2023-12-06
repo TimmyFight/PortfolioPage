@@ -3,7 +3,7 @@ import StrongText from "../../Atoms/StrongText/StrongText";
 
 const AboutSection = () => {
   return (
-    <>
+    <section data-testid="aboutSection">
       <Typography>
         <>
           In 2015 I decided to learn HTML and CSS. I created my first websites,
@@ -20,7 +20,7 @@ const AboutSection = () => {
           prospere <StrongText>startups</StrongText>.
         </>
       </Typography>
-      <Typography>
+      <Typography customClass="pt-4">
         <>
           I am focused on being{" "}
           <StrongText>profesional frontend developer</StrongText>. I am always
@@ -30,7 +30,7 @@ const AboutSection = () => {
           constantly tring new technologies and different way to get my aims.
         </>
       </Typography>
-      <Typography>
+      <Typography customClass="pt-4">
         <>
           I love to hike in the mountains and to ride long on my bicycle and
           listen to my favorite music. I try to keep my health on the highest
@@ -38,7 +38,7 @@ const AboutSection = () => {
           me to move a little after spending a lot of time with computer.
         </>
       </Typography>
-    </>
+    </section>
   );
 };
 
