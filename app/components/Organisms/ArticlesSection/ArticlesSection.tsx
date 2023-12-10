@@ -1,5 +1,5 @@
 const ArticlesSection = () => {
-  return <div>ArticlesSection</div>;
+  return <section id="#articles">ArticlesSection</section>;
 };
 
 export default ArticlesSection;

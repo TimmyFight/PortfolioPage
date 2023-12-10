@@ -3,7 +3,7 @@ import StrongText from "../../Atoms/StrongText/StrongText";
 
 const AboutSection = () => {
   return (
-    <section data-testid="aboutSection">
+    <section id="#about" data-testid="aboutSection">
       <Typography>
         <>
           In 2015 I decided to learn HTML and CSS. I created my first websites,
