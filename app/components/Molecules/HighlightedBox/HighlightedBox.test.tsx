@@ -1,15 +1,15 @@
 import { render, screen } from "@testing-library/react";
-import HighlightedSection from "./HighlightedSection";
+import HighlightedBox from "./HighlightedBox";
 import "@testing-library/jest-dom";
 
-describe("HighlightedSection", () => {
-  it("The HighlightedSection rendered with Titile and Description", () => {
-    render(<HighlightedSection title="Title" description="Description" />);
-    const highlightedSection = screen.getByTestId("highlightedSection");
-    const titleElement = highlightedSection.querySelector("h2");
-    const descriptionElement = highlightedSection.querySelector("p");
+describe("HighlightedBox", () => {
+  it("The HighlightedBox rendered with Titile and Description", () => {
+    render(<HighlightedBox title="Title" description="Description" />);
+    const highlightedBox = screen.getByTestId("highlightedBox");
+    const titleElement = highlightedBox.querySelector("h2");
+    const descriptionElement = highlightedBox.querySelector("p");
 
-    expect(highlightedSection).toBeInTheDocument();
+    expect(highlightedBox).toBeInTheDocument();
     expect(titleElement?.textContent).toBe("Title");
 
     expect(titleElement?.tagName).toBe("H2");
@@ -17,22 +17,22 @@ describe("HighlightedSection", () => {
     expect(descriptionElement?.textContent).toBe("Description");
   });
 
-  it("The HighlightedSection rendered with additional titles", () => {
+  it("The HighlightedBox rendered with additional titles", () => {
     render(
-      <HighlightedSection
+      <HighlightedBox
         title="Title"
         title2="Title2"
         title3="Title3"
         description="Description"
       />
     );
-    const highlightedSection = screen.getByTestId("highlightedSection");
-    const titleElement = highlightedSection.querySelector("h2");
-    const title2Element = highlightedSection.querySelector("h3");
-    const titl3Element = highlightedSection.querySelector("h4");
-    const descriptionElement = highlightedSection.querySelector("p");
+    const highlightedBox = screen.getByTestId("highlightedBox");
+    const titleElement = highlightedBox.querySelector("h2");
+    const title2Element = highlightedBox.querySelector("h3");
+    const titl3Element = highlightedBox.querySelector("h4");
+    const descriptionElement = highlightedBox.querySelector("p");
 
-    expect(highlightedSection).toBeInTheDocument();
+    expect(highlightedBox).toBeInTheDocument();
     expect(titleElement?.textContent).toBe("Title");
     expect(title2Element?.textContent).toBe("Title2");
     expect(titl3Element?.textContent).toBe("Title3");
@@ -44,11 +44,11 @@ describe("HighlightedSection", () => {
     expect(descriptionElement?.textContent).toBe("Description");
   });
 
-  it("The HighlightedSection rendered with aside image", () => {
+  it("The HighlightedBox rendered with aside image", () => {
     const imagePath = "/image.png";
 
     render(
-      <HighlightedSection
+      <HighlightedBox
         title="Title"
         description="Description"
         asideImage={imagePath}
@@ -60,11 +60,11 @@ describe("HighlightedSection", () => {
     expect(asideImage?.getAttribute("src")).toMatch("image.png");
   });
 
-  it("The HighlightedSection rendered with aside text", () => {
+  it("The HighlightedBox rendered with aside text", () => {
     const asideDescription = "/image.png";
 
     render(
-      <HighlightedSection
+      <HighlightedBox
         title="Title"
         description="Description"
         asideText={asideDescription}

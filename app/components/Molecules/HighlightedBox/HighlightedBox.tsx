@@ -3,7 +3,7 @@ import Headings from "../../Atoms/Headings/Headings";
 import Typography from "../../Atoms/Typography/Typography";
 import Chip from "../../Atoms/Chip/Chip";
 
-interface HighlightedSectionProperties {
+interface HighlightedBoxProperties {
   title: string;
   title2?: string;
   title3?: string;
@@ -13,7 +13,7 @@ interface HighlightedSectionProperties {
   usedTechnologies?: string[];
 }
 
-const HighlightedSection = ({
+const HighlightedBox = ({
   title,
   title2,
   title3,
@@ -21,9 +21,9 @@ const HighlightedSection = ({
   asideText,
   asideImage,
   usedTechnologies,
-}: HighlightedSectionProperties) => {
+}: HighlightedBoxProperties) => {
   return (
-    <section data-testid="highlightedSection" className="flex">
+    <section data-testid="highlightedBox" className="flex">
       <aside data-testid="asideSection">
         {asideText !== "" && (
           <Typography>
@@ -62,7 +62,7 @@ const HighlightedSection = ({
   );
 };
 
-HighlightedSection.defaultProps = {
+HighlightedBox.defaultProps = {
   title2: "",
   title3: "",
   asideText: "",
@@ -70,4 +70,4 @@ HighlightedSection.defaultProps = {
   usedTechnologies: [],
 };
 
-export default HighlightedSection;
+export default HighlightedBox;
