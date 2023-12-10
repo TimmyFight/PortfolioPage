@@ -1,11 +1,6 @@
 import { createApi, fakeBaseQuery } from "@reduxjs/toolkit/query/react";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
-
-const db = getFirestore();
-
-interface GetQueryParameters {
-  projectId: string;
-}
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/firebase/clientApp";
 
 interface Experiences {
   title: string;
@@ -22,11 +17,16 @@ export const experiencesApi = createApi({
   baseQuery: fakeBaseQuery(),
 
   endpoints: (builder) => ({
-    getExperiences: builder.query<Experiences[], GetQueryParameters>({
-      query: async ({ projectId }: GetQueryParameters) => {
-        const ref = doc(db, "experiences", projectId);
-        const getDocument = await getDoc(ref);
-        return { data: getDocument.data() };
+    getExperiences: builder.query<Experiences[], null>({
+      query: async () => {
+        const ref = collection(db, "experiences");
+        const getDocument = await getDocs(ref);
+        const data = getDocument.docs.map((doc) => doc.data());
+        if (data) {
+          return { data };
+        } else {
+          return { data: null };
+        }
       },
     }),
   }),
