@@ -1,16 +1,26 @@
 "use client";
 
-import { configureStore } from "@reduxjs/toolkit";
+import { Middleware, configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import activeLinkReducer from "./activeLinkSlice";
+import { experiencesApi } from "./experiences";
+import { combineReducers } from "@reduxjs/toolkit";
 
 export interface RootState {
   activeLink: string;
+  [experiencesApi.reducerPath]: ReturnType<typeof experiencesApi.reducer>;
 }
 
 export default function ReduxProvider({ children, initialState }: any) {
-  const store = configureStore<RootState>({
-    reducer: { activeLink: activeLinkReducer },
+  const rootReducer = combineReducers({
+    [experiencesApi.reducerPath]: experiencesApi.reducer,
+    activeLink: activeLinkReducer,
+  });
+
+  const store = configureStore({
+    reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(experiencesApi.middleware as Middleware),
     preloadedState: initialState,
   });
 
