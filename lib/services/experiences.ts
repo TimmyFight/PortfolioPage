@@ -17,7 +17,7 @@ export const experiencesApi = createApi({
   baseQuery: fakeBaseQuery(),
 
   endpoints: (builder) => ({
-    getExperiences: builder.query<Experiences[], null>({
+    getExperiences: builder.query<Experiences[], void>({
       query: async () => {
         const ref = collection(db, "experiences");
         const getDocument = await getDocs(ref);

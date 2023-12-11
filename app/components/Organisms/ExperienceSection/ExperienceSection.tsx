@@ -1,14 +1,29 @@
 "use client";
 
 import { useGetExperiencesQuery } from "@/lib/services/experiences";
+import { useEffect, useState } from "react";
 
 const ExperienceSection = () => {
-  const { data } = useGetExperiencesQuery(null);
+  const { data, isLoading } = useGetExperiencesQuery();
+
+  const [experiences, setExperiences] = useState([
+    { title: "", description: "" },
+  ]);
+
+  useEffect(() => {
+    if (data) {
+      setExperiences(data);
+    }
+  }, [data]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <section id="#experience">
-      {data?.map((element) => {
-        return <p>{element.title}</p>;
+      {experiences?.map((element) => {
+        return <p key={element.title}>{element.title}</p>;
       })}
     </section>
   );
