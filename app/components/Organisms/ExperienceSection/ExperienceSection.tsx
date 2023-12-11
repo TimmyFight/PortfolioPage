@@ -1,29 +1,26 @@
 "use client";
 
 import { useGetExperiencesQuery } from "@/lib/services/experiences";
-import { useEffect, useState } from "react";
+import HighlightedBox from "../../Molecules/HighlightedBox/HighlightedBox";
 
 const ExperienceSection = () => {
-  const { data, isLoading } = useGetExperiencesQuery();
-
-  const [experiences, setExperiences] = useState([
-    { title: "", description: "" },
-  ]);
-
-  useEffect(() => {
-    if (data) {
-      setExperiences(data);
-    }
-  }, [data]);
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  const { data } = useGetExperiencesQuery();
 
   return (
     <section id="#experience">
-      {experiences?.map((element) => {
-        return <p key={element.title}>{element.title}</p>;
+      {data?.map((element) => {
+        return (
+          <HighlightedBox
+            key={element.title}
+            title={element.title}
+            title2={element.title2}
+            title3={element.title3}
+            description={element.description}
+            asideText={element.asideText}
+            asideImage={element.asideImage}
+            usedTechnologies={element.usedTechnologies}
+          />
+        );
       })}
     </section>
   );
