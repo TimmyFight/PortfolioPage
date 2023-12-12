@@ -28,7 +28,7 @@ const HighlightedBox = ({
       className="w-full p-8 flex gap-4 justify-between border-transparent border hover:cursor-pointer hover:rounded-lg hover:border-dashed hover:border-emerald-700">
       <aside data-testid="asideSection">
         {asideText !== "" && (
-          <Typography>
+          <Typography customClass="text-sm pt-1">
             <>{asideText}</>
           </Typography>
         )}
@@ -38,7 +38,7 @@ const HighlightedBox = ({
       </aside>
       <div data-testid="mainSection" className="grow">
         <div>
-          <Headings level={2}>
+          <Headings level={2} customClass="text-lg text-neutral-300">
             <>{title}</>
           </Headings>
           {title2 !== "" && (
@@ -51,7 +51,7 @@ const HighlightedBox = ({
               <>{title3}</>
             </Headings>
           )}
-          <Typography>
+          <Typography customClass="pt-2 text-sm">
             <>{description}</>
           </Typography>
         </div>
