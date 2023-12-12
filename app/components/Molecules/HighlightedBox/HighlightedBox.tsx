@@ -23,7 +23,9 @@ const HighlightedBox = ({
   usedTechnologies,
 }: HighlightedBoxProperties) => {
   return (
-    <section data-testid="highlightedBox" className="flex">
+    <section
+      data-testid="highlightedBox"
+      className="w-full p-8 flex gap-4 justify-between border-transparent border hover:cursor-pointer hover:rounded-lg hover:border-dashed hover:border-emerald-700">
       <aside data-testid="asideSection">
         {asideText !== "" && (
           <Typography>
@@ -34,7 +36,7 @@ const HighlightedBox = ({
           <Image alt={title} src={asideImage} width={20} height={40} />
         )}
       </aside>
-      <div data-testid="mainSection">
+      <div data-testid="mainSection" className="grow">
         <div>
           <Headings level={2}>
             <>{title}</>

@@ -7,7 +7,7 @@ const ExperienceSection = () => {
   const { data } = useGetExperiencesQuery();
 
   return (
-    <section id="#experience">
+    <section id="#experience" className="w-full flex gap-2">
       {data?.map((element) => {
         return (
           <HighlightedBox
