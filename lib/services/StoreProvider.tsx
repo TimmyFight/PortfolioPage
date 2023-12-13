@@ -11,7 +11,7 @@ export interface RootState {
   [experiencesApi.reducerPath]: ReturnType<typeof experiencesApi.reducer>;
 }
 
-export default function ReduxProvider({ children, initialState }: any) {
+export default function StoreProvider({ children, initialState }: any) {
   const rootReducer = combineReducers({
     [experiencesApi.reducerPath]: experiencesApi.reducer,
     activeLink: activeLinkReducer,

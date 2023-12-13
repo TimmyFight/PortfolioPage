@@ -2,7 +2,7 @@ import { createApi, fakeBaseQuery } from "@reduxjs/toolkit/query/react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/firebase/clientApp";
 
-interface Experiences {
+export interface Experiences {
   title: string;
   title2?: string;
   title3?: string;
@@ -27,11 +27,11 @@ export const experiencesApi = createApi({
             // @ts-ignore
             return { data };
           } else {
-            return { data: null };
+            return { data: [] };
           }
         } catch (error) {
           console.error("Error fetching experiences:", error);
-          return { data: null };
+          return { data: [] };
         }
       },
     }),

@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useGetExperiencesQuery } from "@/lib/services/experiences";
 import HighlightedBox from "../../Molecules/HighlightedBox/HighlightedBox";
 
