@@ -3,16 +3,15 @@ interface StrongTextProperties {
   customClass?: string;
 }
 
-const StrongText = ({ children, customClass }: StrongTextProperties) => {
+const StrongText = ({
+  children,
+  customClass = "text-neutral-300",
+}: StrongTextProperties) => {
   return (
     <strong data-testid="strongText" className={customClass}>
       {children}
     </strong>
   );
-};
-
-StrongText.defaultProps = {
-  customClass: "text-neutral-300",
 };
 
 export default StrongText;

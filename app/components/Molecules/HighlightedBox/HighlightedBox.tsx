@@ -15,12 +15,12 @@ interface HighlightedBoxProperties {
 
 const HighlightedBox = ({
   title,
-  title2,
-  title3,
+  title2 = "",
+  title3 = "",
   description,
-  asideText,
-  asideImage,
-  technologies,
+  asideText = "",
+  asideImage = "",
+  technologies = "",
 }: HighlightedBoxProperties) => {
   return (
     <section
@@ -58,21 +58,13 @@ const HighlightedBox = ({
         {technologies && (
           <section className="flex flex-row mt-6 gap-4">
             {technologies.split(",").map((technology: string) => (
-              <Chip technology={technology} />
+              <Chip key={technology} technology={technology} />
             ))}
           </section>
         )}
       </div>
     </section>
   );
-};
-
-HighlightedBox.defaultProps = {
-  title2: "",
-  title3: "",
-  asideText: "",
-  asideImage: "",
-  usedTechnologies: [],
 };
 
 export default HighlightedBox;

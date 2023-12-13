@@ -4,19 +4,17 @@ interface HeadingsProperties {
   customClass?: string;
 }
 
-const Headings = ({ children, level, customClass }: HeadingsProperties) => {
+const Headings = ({
+  children = <></>,
+  level = 1,
+  customClass = "",
+}: HeadingsProperties) => {
   const HeadTag = `h${level}` as keyof JSX.IntrinsicElements;
   return (
     <HeadTag data-testid="heading" className={customClass}>
       {children}
     </HeadTag>
   );
-};
-
-Headings.defaultProps = {
-  children: "",
-  level: 1,
-  customClass: "",
 };
 
 export default Headings;
