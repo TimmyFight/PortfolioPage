@@ -11,7 +11,7 @@ const ExperienceSection = () => {
   }
 
   return (
-    <section id="#experience" className="w-full flex gap-2">
+    <section id="experience" className="w-full flex gap-2 pt-28">
       {data &&
         data?.map((element) => {
           return (

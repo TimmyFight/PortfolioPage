@@ -6,7 +6,7 @@ import ArticlesSection from "./components/Organisms/ArticlesSection/ArticlesSect
 export default function Home() {
   return (
     <section
-      className="flex flex-col gap-3 items-center h-screen p-28 text-neutral-400 bg-gradient-to-r from-neutral-900 to-neutral-800"
+      className="flex flex-col gap-3 items-center h-screen overflow-auto pl-28 pr-28 pb-28 text-neutral-400 bg-gradient-to-r from-neutral-900 to-neutral-800"
       data-testid="applicationContainer text-justify">
       <AboutSection />
       <ExperienceSection />

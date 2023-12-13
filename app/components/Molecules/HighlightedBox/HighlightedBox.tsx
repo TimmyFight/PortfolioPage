@@ -55,10 +55,13 @@ const HighlightedBox = ({
             <>{description}</>
           </Typography>
         </div>
-        {technologies &&
-          technologies
-            .split(",")
-            .map((technology: string) => <Chip technology={technology} />)}
+        {technologies && (
+          <section className="flex flex-row mt-6 gap-4">
+            {technologies.split(",").map((technology: string) => (
+              <Chip technology={technology} />
+            ))}
+          </section>
+        )}
       </div>
     </section>
   );

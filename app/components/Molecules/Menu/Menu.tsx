@@ -7,10 +7,14 @@ import { setActiveLink } from "@/lib/services/activeLinkSlice";
 
 const Menu = () => {
   const dispatch = useDispatch();
-  const hash = typeof window !== "undefined" ? window.location.hash : "";
-  hash
-    ? dispatch(setActiveLink(`./${hash}`))
-    : dispatch(setActiveLink("./#about"));
+
+  if (typeof window !== "undefined") {
+    if (window.location.hash === "") {
+      dispatch(setActiveLink("./#about"));
+    } else {
+      dispatch(setActiveLink(`./${window.location.hash}`));
+    }
+  }
 
   return (
     <nav data-testid="menu">

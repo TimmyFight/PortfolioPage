@@ -1,5 +1,9 @@
 const ArticlesSection = () => {
-  return <section id="#articles">ArticlesSection</section>;
+  return (
+    <section id="articles" className="pt-28">
+      ArticlesSection
+    </section>
+  );
 };
 
 export default ArticlesSection;
