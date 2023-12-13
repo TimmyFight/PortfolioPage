@@ -23,7 +23,7 @@ const ExperienceSection = () => {
               description={element.description}
               asideText={element.asideText}
               asideImage={element.asideImage}
-              usedTechnologies={element.usedTechnologies}
+              technologies={element.technologies}
             />
           );
         })}

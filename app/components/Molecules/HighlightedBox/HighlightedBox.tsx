@@ -10,7 +10,7 @@ interface HighlightedBoxProperties {
   description: string;
   asideText?: string;
   asideImage?: string;
-  usedTechnologies?: string[];
+  technologies?: string;
 }
 
 const HighlightedBox = ({
@@ -20,7 +20,7 @@ const HighlightedBox = ({
   description,
   asideText,
   asideImage,
-  usedTechnologies,
+  technologies,
 }: HighlightedBoxProperties) => {
   return (
     <section
@@ -55,10 +55,10 @@ const HighlightedBox = ({
             <>{description}</>
           </Typography>
         </div>
-        {usedTechnologies &&
-          usedTechnologies.map((technology: string) => (
-            <Chip technology={technology} />
-          ))}
+        {technologies &&
+          technologies
+            .split(",")
+            .map((technology: string) => <Chip technology={technology} />)}
       </div>
     </section>
   );

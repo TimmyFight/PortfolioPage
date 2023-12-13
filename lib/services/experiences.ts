@@ -9,7 +9,7 @@ export interface Experiences {
   description: string;
   asideText?: string;
   asideImage?: string;
-  usedTechnologies?: string[];
+  technologies?: string;
 }
 
 export const experiencesApi = createApi({
