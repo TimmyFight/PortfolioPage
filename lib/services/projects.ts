@@ -6,7 +6,7 @@ export interface Projects {
   title: string;
   description: string;
   asideImage?: string;
-  technologies?: string;
+  technologies?: string[];
   urlLink?: string;
 }
 

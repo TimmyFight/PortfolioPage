@@ -10,7 +10,7 @@ interface HighlightedBoxProperties {
   description: string;
   asideText?: string;
   asideImage?: string;
-  technologies?: string;
+  technologies?: string[];
 }
 
 const HighlightedBox = ({
@@ -20,7 +20,7 @@ const HighlightedBox = ({
   description,
   asideText = "",
   asideImage = "",
-  technologies = "",
+  technologies = [],
 }: HighlightedBoxProperties) => {
   return (
     <section
@@ -57,7 +57,7 @@ const HighlightedBox = ({
         </div>
         {technologies && (
           <section className="flex flex-row mt-6 gap-4">
-            {technologies.split(",").map((technology: string) => (
+            {technologies.map((technology: string) => (
               <Chip key={technology} technology={technology} />
             ))}
           </section>

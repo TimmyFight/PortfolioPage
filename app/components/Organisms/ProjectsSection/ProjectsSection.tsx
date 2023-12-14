@@ -11,7 +11,7 @@ const ProjectsSection = () => {
   }
 
   return (
-    <section id="projects" className="w-full flex gap-2 pt-28">
+    <section id="projects" className="w-full flex flex-col gap-2 pt-28">
       {data &&
         data?.map((element) => {
           return (

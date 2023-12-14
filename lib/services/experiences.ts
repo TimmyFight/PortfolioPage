@@ -8,7 +8,7 @@ export interface Experiences {
   title3?: string;
   description: string;
   asideText?: string;
-  technologies?: string;
+  technologies?: string[];
 }
 
 export const experiencesApi = createApi({
