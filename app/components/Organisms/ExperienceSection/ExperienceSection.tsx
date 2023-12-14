@@ -22,7 +22,6 @@ const ExperienceSection = () => {
               title3={element.title3}
               description={element.description}
               asideText={element.asideText}
-              asideImage={element.asideImage}
               technologies={element.technologies}
             />
           );

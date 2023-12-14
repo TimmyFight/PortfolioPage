@@ -2,24 +2,23 @@ import { createApi, fakeBaseQuery } from "@reduxjs/toolkit/query/react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/firebase/clientApp";
 
-export interface Experiences {
+export interface Projects {
   title: string;
-  title2?: string;
-  title3?: string;
   description: string;
-  asideText?: string;
+  asideImage?: string;
   technologies?: string;
+  urlLink?: string;
 }
 
-export const experiencesApi = createApi({
-  reducerPath: "experiencesApi",
+export const projectsApi = createApi({
+  reducerPath: "projectsApi",
   baseQuery: fakeBaseQuery(),
 
   endpoints: (builder) => ({
-    getExperiences: builder.query<Experiences[] | null, void>({
-      queryFn: async (): Promise<{ data: Experiences[] | null }> => {
+    getProjects: builder.query<Projects[] | null, void>({
+      queryFn: async (): Promise<{ data: Projects[] | null }> => {
         try {
-          const ref = collection(db, "experiences");
+          const ref = collection(db, "projects");
           const getDocument = await getDocs(ref);
           const data = getDocument.docs.map((doc) => doc.data());
           if (data) {
@@ -29,7 +28,7 @@ export const experiencesApi = createApi({
             return { data: [] };
           }
         } catch (error) {
-          console.error("Error fetching experiences:", error);
+          console.error("Error fetching projects:", error);
           return { data: [] };
         }
       },
@@ -37,4 +36,4 @@ export const experiencesApi = createApi({
   }),
 });
 
-export const { useGetExperiencesQuery } = experiencesApi;
+export const { useGetProjectsQuery } = projectsApi;
