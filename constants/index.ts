@@ -7,5 +7,5 @@ export const MAIN_MENU_ITEMS = [
 
 export const SOCIAL_ITEMS = [
   { name: "GitHub", href: "https://github.com/TimmyFight" },
-  { name: "LinkedIn", href: "https://www.linkedin.com/" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/adrian-cio%C5%82kieiwcz/" },
 ];
