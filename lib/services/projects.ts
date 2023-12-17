@@ -2,14 +2,6 @@ import { createApi, fakeBaseQuery } from "@reduxjs/toolkit/query/react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/firebase/clientApp";
 
-export interface Projects {
-  title: string;
-  description: string;
-  asideImage?: string;
-  technologies?: string[];
-  urlLink?: string;
-}
-
 export const projectsApi = createApi({
   reducerPath: "projectsApi",
   baseQuery: fakeBaseQuery(),

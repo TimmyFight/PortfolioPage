@@ -3,15 +3,7 @@ import Headings from "../../Atoms/Headings/Headings";
 import Typography from "../../Atoms/Typography/Typography";
 import Chip from "../../Atoms/Chip/Chip";
 
-interface HighlightedBoxProperties {
-  title: string;
-  title2?: string;
-  title3?: string;
-  description: string;
-  asideText?: string;
-  asideImage?: string;
-  technologies?: string[];
-}
+type HighlightedBoxProperties = Articles & Projects & Experiences;
 
 const HighlightedBox = ({
   title,
@@ -28,7 +20,7 @@ const HighlightedBox = ({
       className="w-full p-8 flex gap-4 justify-between border-transparent border hover:cursor-pointer hover:rounded-lg hover:border-dashed hover:border-emerald-700">
       <aside data-testid="asideSection">
         {asideText !== "" && (
-          <Typography customClass="text-sm pt-1">
+          <Typography customClass="text-sm pt-1 whitespace-nowrap">
             <>{asideText}</>
           </Typography>
         )}
@@ -56,7 +48,7 @@ const HighlightedBox = ({
           </Typography>
         </div>
         {technologies && (
-          <section className="flex flex-row mt-6 gap-4">
+          <section className="flex flex-row flex-wrap mt-6 gap-4">
             {technologies.map((technology: string) => (
               <Chip key={technology} technology={technology} />
             ))}
