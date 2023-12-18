@@ -18,11 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`flex ${robotoSlab.className}`}>
+    <html
+      lang="en"
+      className={`bg-gradient-to-r from-neutral-900 to-neutral-800 ${robotoSlab.className}`}>
+      <body>
         <StoreProvider>
-          <NavBar />
-          <main className="w-2/3 h-screen">{children}</main>
+          <section className="flex justify-center relative">
+            <section className="flex min-h-screen max-w-screen-xl abbsolute">
+              <NavBar />
+              <main className="w-1/2">{children}</main>
+            </section>
+          </section>
         </StoreProvider>
       </body>
     </html>
