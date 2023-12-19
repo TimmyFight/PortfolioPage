@@ -1,5 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setActiveLink } from "@/lib/services/activeLinkSlice";
+import { useInView } from "react-intersection-observer";
 import { useGetArticlesQuery } from "@/lib/services/articles";
 import HighlightedBox from "../../Molecules/HighlightedBox/HighlightedBox";
 import Link from "next/link";
@@ -7,12 +11,27 @@ import Link from "next/link";
 const ArticlesSection = () => {
   const { data, isLoading } = useGetArticlesQuery();
 
+  const dispatch = useDispatch();
+  const [articleRef, inView, entry] = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView && entry) {
+      dispatch(setActiveLink(`./#${entry.target.id}`));
+    }
+  }, [inView]);
+
   if (isLoading) {
     return "";
   }
 
   return (
-    <section id="articles" className="w-full flex flex-col gap-2 pt-28">
+    <section
+      ref={articleRef}
+      data-observe="true"
+      id="articles"
+      className="w-full flex flex-col gap-2 pt-28">
       {data &&
         data?.map((element) => {
           if (element.urlLink) {

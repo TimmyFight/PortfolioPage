@@ -1,9 +1,31 @@
+"use client";
+
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setActiveLink } from "@/lib/services/activeLinkSlice";
+import { useInView } from "react-intersection-observer";
 import Typography from "../../Atoms/Typography/Typography";
 import StrongText from "../../Atoms/StrongText/StrongText";
 
 const AboutSection = () => {
+  const dispatch = useDispatch();
+  const [aboutRef, inView, entry] = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView && entry) {
+      dispatch(setActiveLink(`./#${entry.target.id}`));
+    }
+  }, [inView]);
+
   return (
-    <section id="about" className="pt-28" data-testid="aboutSection">
+    <section
+      ref={aboutRef}
+      data-observe="true"
+      id="about"
+      className="pt-28"
+      data-testid="aboutSection">
       <Typography>
         <>
           In 2015 I decided to learn HTML and CSS. I created my first websites,
