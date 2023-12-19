@@ -17,9 +17,8 @@ const ExperienceSection = () => {
         data?.map((element) => {
           if (element.urlLink) {
             return (
-              <Link href={element.urlLink} target="_blank">
+              <Link href={element.urlLink} target="_blank" key={element.title}>
                 <HighlightedBox
-                  key={element.title}
                   title={element.title}
                   title2={element.title2}
                   title3={element.title3}

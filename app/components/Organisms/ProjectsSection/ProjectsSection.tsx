@@ -17,9 +17,8 @@ const ProjectsSection = () => {
         data?.map((element) => {
           if (element.urlLink) {
             return (
-              <Link href={element.urlLink} target="_blank">
+              <Link href={element.urlLink} target="_blank" key={element.title}>
                 <HighlightedBox
-                  key={element.title}
                   title={element.title}
                   description={element.description}
                   asideImage={element.asideImage}
