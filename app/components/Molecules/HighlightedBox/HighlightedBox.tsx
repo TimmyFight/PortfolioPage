@@ -22,13 +22,19 @@ const HighlightedBox = ({
         urlLink ? "hover:cursor-pointer" : "hover:cursor-default"
       } hover:rounded-lg hover:border-dashed hover:border-emerald-700`}>
       <aside data-testid="asideSection">
-        {asideText !== "" && (
+        {asideText && (
           <Typography customClass="text-sm pt-1 whitespace-nowrap">
             <>{asideText}</>
           </Typography>
         )}
-        {asideImage && asideImage !== "" && (
-          <Image alt={title} src={asideImage} width={20} height={40} />
+        {asideImage && (
+          <Image
+            alt={title}
+            src={asideImage}
+            width={150}
+            height={75}
+            className="max-w-fit"
+          />
         )}
       </aside>
       <div data-testid="mainSection" className="grow">
