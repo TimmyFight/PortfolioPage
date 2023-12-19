@@ -12,8 +12,9 @@ export const experiencesApi = createApi({
         try {
           const ref = collection(db, "experiences");
           const getDocument = await getDocs(ref);
-          const data = getDocument.docs.map((doc) => doc.data());
+          let data = getDocument.docs.map((doc) => doc.data());
           if (data) {
+            data = data.sort((a, b) => b.orderId - a.orderId);
             // @ts-ignore
             return { data };
           } else {

@@ -1,27 +1,26 @@
 export {};
 
 declare global {
-  interface Articles {
+  interface standardFirebaseResponse {
     title: string;
     description: string;
-    asideImage?: string;
     urlLink?: string;
   }
 
-  interface Experiences {
-    title: string;
+  interface Articles extends standardFirebaseResponse {
+    asideImage?: string;
+  }
+
+  interface Experiences extends standardFirebaseResponse {
     title2?: string;
     title3?: string;
-    description: string;
     asideText?: string;
     technologies?: string[];
+    orderId?: number;
   }
 
-  interface Projects {
-    title: string;
-    description: string;
+  interface Projects extends standardFirebaseResponse {
     asideImage?: string;
     technologies?: string[];
-    urlLink?: string;
   }
 }

@@ -20,6 +20,7 @@ const ArticlesSection = () => {
               title={element.title}
               description={element.description}
               asideImage={element.asideImage}
+              urlLink={element.urlLink}
             />
           );
         })}

@@ -23,6 +23,7 @@ const ExperienceSection = () => {
               description={element.description}
               asideText={element.asideText}
               technologies={element.technologies}
+              urlLink={element.urlLink}
             />
           );
         })}

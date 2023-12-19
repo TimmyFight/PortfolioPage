@@ -13,11 +13,14 @@ const HighlightedBox = ({
   asideText = "",
   asideImage = "",
   technologies = [],
+  urlLink = "",
 }: HighlightedBoxProperties) => {
   return (
     <section
       data-testid="highlightedBox"
-      className="w-full p-8 flex gap-4 justify-between border-transparent border hover:cursor-pointer hover:rounded-lg hover:border-dashed hover:border-emerald-700">
+      className={`w-full p-8 flex gap-4 justify-between border-transparent border ${
+        urlLink ? "hover:cursor-pointer" : "hover:cursor-default"
+      } hover:rounded-lg hover:border-dashed hover:border-emerald-700`}>
       <aside data-testid="asideSection">
         {asideText !== "" && (
           <Typography customClass="text-sm pt-1 whitespace-nowrap">

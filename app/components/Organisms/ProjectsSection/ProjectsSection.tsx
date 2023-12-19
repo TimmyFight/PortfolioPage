@@ -21,6 +21,7 @@ const ProjectsSection = () => {
               description={element.description}
               asideImage={element.asideImage}
               technologies={element.technologies}
+              urlLink={element.urlLink}
             />
           );
         })}
