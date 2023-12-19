@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { setActiveLink } from "@/lib/services/activeLinkSlice";
 import { RootState } from "@/lib/services/StoreProvider";
-import { Ref } from "react";
 
 interface MenuItemProperties {
   item: {
