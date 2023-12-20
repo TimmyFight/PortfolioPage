@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-gradient-to-r from-neutral-900 to-neutral-800 ${robotoSlab.className} scroll-smooth`}>
+      className={`bg-gradient-to-r from-neutral-900 to-neutral-800 ${robotoSlab.className}`}>
       <body>
         <StoreProvider>
           <section className="flex justify-center relative">
