@@ -19,13 +19,13 @@ const MenuItem = ({ item }: MenuItemProperties) => {
     <li
       className={`transition-all ${
         activeLink === item.href
-          ? "duration-300 ease-in relative left-full text-lg"
-          : "left-0"
+          ? "duration-300 ease-in lg:relative left-full text-lg"
+          : "max-lg:hidden left-0"
       }`}>
       <Link
         data-testid="menuItem"
         href={item.href}
-        className={`flex cursor-pointer font-bold underline-offset-4 hover:underline hover:text-emerald-500 ${
+        className={`cursor-pointer font-bold underline-offset-4 hover:underline hover:text-emerald-500 ${
           activeLink === item.href
             ? "underline text-emerald-500"
             : "text-emerald-700"

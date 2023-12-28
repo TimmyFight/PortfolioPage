@@ -15,7 +15,7 @@ const ExperienceSection = () => {
 
   const dispatch = useDispatch();
   const [experienceRef, inView, entry] = useInView({
-    threshold: 0.5,
+    threshold: 0.4,
   });
 
   useEffect(() => {

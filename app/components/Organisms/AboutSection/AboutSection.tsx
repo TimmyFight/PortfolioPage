@@ -10,7 +10,7 @@ import StrongText from "../../Atoms/StrongText/StrongText";
 const AboutSection = () => {
   const dispatch = useDispatch();
   const [aboutRef, inView, entry] = useInView({
-    threshold: 0.5,
+    threshold: 0.4,
   });
 
   useEffect(() => {
