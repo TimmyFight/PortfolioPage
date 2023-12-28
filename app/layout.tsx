@@ -24,9 +24,9 @@ export default function RootLayout({
       <body>
         <StoreProvider>
           <section className="flex justify-center relative">
-            <section className="flex min-h-screen max-w-screen-xl abbsolute">
+            <section className="lg:flex lg:min-h-screen max-w-screen-xl abbsolute">
               <NavBar />
-              <main className="w-1/2">{children}</main>
+              <main className="lg:w-1/2">{children}</main>
             </section>
           </section>
         </StoreProvider>

@@ -18,16 +18,18 @@ const HighlightedBox = ({
   return (
     <section
       data-testid="highlightedBox"
-      className={`w-full p-8 flex gap-4 justify-between border-transparent border ${
+      className={`w-full p-8 flex max-lg:flex-col gap-4 justify-between border-transparent border ${
         urlLink ? "hover:cursor-pointer" : "hover:cursor-default"
       } hover:rounded-lg hover:border-dashed hover:border-emerald-700`}>
-      <aside data-testid="asideSection">
-        {asideText && (
+      {asideText && (
+        <aside data-testid="asideSection">
           <Typography customClass="text-sm pt-1 whitespace-nowrap">
             <>{asideText}</>
           </Typography>
-        )}
-        {asideImage && (
+        </aside>
+      )}
+      {asideImage && (
+        <aside data-testid="asideSection" className="max-lg:order-last">
           <Image
             alt={title}
             src={asideImage}
@@ -35,8 +37,8 @@ const HighlightedBox = ({
             height={75}
             className="max-w-fit"
           />
-        )}
-      </aside>
+        </aside>
+      )}
       <div data-testid="mainSection" className="grow">
         <div>
           <Headings level={2} customClass="text-lg text-neutral-300">

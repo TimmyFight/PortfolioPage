@@ -7,7 +7,7 @@ const SocialFooter = () => {
   return (
     <footer
       data-testid="socialFooter"
-      className="flex gap-6 items-center absolute bottom-10">
+      className="flex gap-6 items-center max-lg:justify-center lg:absolute lg:bottom-10">
       {SOCIAL_ITEMS.map((social) => {
         return (
           <Link key={social.name} href={social.href} target="_blank">

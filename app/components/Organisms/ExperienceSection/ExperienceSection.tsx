@@ -33,7 +33,7 @@ const ExperienceSection = () => {
       ref={experienceRef}
       data-observe="true"
       id="experience"
-      className="w-full flex flex-col gap-2 pt-28">
+      className="w-full flex flex-col gap-2 pt-10 lg:pt-28">
       {data &&
         data?.map((element) => {
           if (element.urlLink) {
@@ -69,7 +69,7 @@ const ExperienceSection = () => {
         href="/pdf/adrian_ciolkiewicz-cv.pdf"
         target="_blank"
         locale={false}
-        className="flex flex-row items-center mt-14 cursor-pointer underline-offset-4 text-emerald-700 gap-0 hover:gap-2 hover:underline hover:text-emerald-500 transition-all duration-500 ease-in">
+        className="flex flex-row items-center max-lg:justify-center mt-14 cursor-pointer underline-offset-4 text-emerald-700 gap-0 hover:gap-2 hover:underline hover:text-emerald-500 transition-all duration-500 ease-in">
         <Typography customClass="text-sm font-bold uppercase">
           <>View my complete resume</>
         </Typography>

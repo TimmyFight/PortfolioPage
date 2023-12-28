@@ -24,7 +24,7 @@ const AboutSection = () => {
       ref={aboutRef}
       data-observe="true"
       id="about"
-      className="pt-28"
+      className="pt-10 lg:pt-28"
       data-testid="aboutSection">
       <Typography>
         <>
