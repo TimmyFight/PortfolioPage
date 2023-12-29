@@ -24,8 +24,7 @@ const AboutSection = () => {
       ref={aboutRef}
       data-observe="true"
       id="about"
-      className="pt-10 lg:pt-28"
-      data-testid="aboutSection">
+      className="pt-14 lg:pt-28">
       <Typography>
         <>
           In 2015 I decided to learn HTML and CSS. I created my first websites,
