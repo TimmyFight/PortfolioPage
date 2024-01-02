@@ -1,8 +1,8 @@
 export const MAIN_MENU_ITEMS = [
-  { name: "// Get to know me better", href: "./#about" },
-  { name: "// Experience", href: "./#experience" },
-  { name: "// Projects", href: "./#projects" },
-  { name: "// Articles", href: "./#articles" },
+  { name: "// Get to know me better", href: "#about" },
+  { name: "// Experience", href: "#experience" },
+  { name: "// Projects", href: "#projects" },
+  { name: "// Articles", href: "#articles" },
 ];
 
 export const SOCIAL_ITEMS = [

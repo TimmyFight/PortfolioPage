@@ -10,9 +10,9 @@ const Menu = () => {
 
   if (typeof window !== "undefined") {
     if (window.location.hash === "") {
-      dispatch(setActiveLink("./#about"));
+      dispatch(setActiveLink("#about"));
     } else {
-      dispatch(setActiveLink(`./${window.location.hash}`));
+      dispatch(setActiveLink(`${window.location.hash}`));
     }
   }
 

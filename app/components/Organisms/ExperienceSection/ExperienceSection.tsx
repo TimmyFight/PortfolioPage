@@ -20,7 +20,7 @@ const ExperienceSection = () => {
 
   useEffect(() => {
     if (inView && entry) {
-      dispatch(setActiveLink(`./#${entry.target.id}`));
+      dispatch(setActiveLink(`#${entry.target.id}`));
     }
   }, [inView]);
 
