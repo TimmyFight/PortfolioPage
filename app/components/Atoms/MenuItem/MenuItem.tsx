@@ -25,6 +25,7 @@ const MenuItem = ({ item }: MenuItemProperties) => {
       <Link
         data-testid="menuItem"
         href={item.href}
+        shallow={true}
         className={`cursor-pointer font-bold underline-offset-4 hover:underline hover:text-emerald-500 ${
           activeLink === item.href
             ? "underline text-emerald-500"
