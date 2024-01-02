@@ -13,7 +13,7 @@ const ProjectsSection = () => {
 
   const dispatch = useDispatch();
   const [projectRef, inView, entry] = useInView({
-    threshold: 0.4,
+    threshold: 0.3,
   });
 
   useEffect(() => {

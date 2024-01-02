@@ -7,7 +7,7 @@ import StoreProvider from "@/lib/services/StoreProvider";
 const robotoSlab = Roboto_Slab({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adrian Ciołkiewicz - Frontend Devweloper",
+  title: "Adrian Ciołkiewicz - Frontend Developer",
   description:
     "You can find here my story of career, my projects and I can show you my small world.",
 };
