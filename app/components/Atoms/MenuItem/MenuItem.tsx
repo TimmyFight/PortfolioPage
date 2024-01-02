@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useSelector, useDispatch } from "react-redux";
 import { setActiveLink } from "@/lib/services/activeLinkSlice";
 import { RootState } from "@/lib/services/StoreProvider";
@@ -14,6 +15,14 @@ interface MenuItemProperties {
 
 const MenuItem = ({ item }: MenuItemProperties) => {
   const dispatch = useDispatch();
+  const router = useRouter();
+
+  const handleClickAction = (event: any) => {
+    event.preventDefault();
+    router.push(`${item.href}`);
+    dispatch(setActiveLink(`${item.href}`));
+  };
+
   const activeLink = useSelector((state: RootState) => state.activeLink);
   return (
     <li
@@ -30,7 +39,7 @@ const MenuItem = ({ item }: MenuItemProperties) => {
             ? "underline text-emerald-500"
             : "text-emerald-700"
         }`}
-        onClick={() => dispatch(setActiveLink(`${item.href}`))}>
+        onClick={(event) => handleClickAction(event)}>
         {item.name}
       </Link>
     </li>
