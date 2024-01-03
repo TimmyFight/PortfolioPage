@@ -10,7 +10,11 @@ const SocialFooter = () => {
       className="flex gap-6 items-center max-lg:justify-center lg:absolute lg:bottom-10 max-lg:mt-6">
       {SOCIAL_ITEMS.map((social) => {
         return (
-          <Link key={social.name} href={social.href} target="_blank">
+          <Link
+            key={social.name}
+            href={social.href}
+            title={social.name}
+            target="_blank">
             {social.name === "GitHub" && <GitHubIcon />}
             {social.name === "LinkedIn" && <LinkedInIcon />}
           </Link>
