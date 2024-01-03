@@ -29,7 +29,6 @@ const ProjectsSection = () => {
   return (
     <section
       ref={projectRef}
-      data-observe="true"
       id="projects"
       className="w-full flex flex-col gap-2 pt-10 lg:pt-28">
       {data &&

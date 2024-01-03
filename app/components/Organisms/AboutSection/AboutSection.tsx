@@ -20,11 +20,7 @@ const AboutSection = () => {
   }, [inView]);
 
   return (
-    <section
-      ref={aboutRef}
-      data-observe="true"
-      id="about"
-      className="pt-14 lg:pt-28">
+    <section ref={aboutRef} id="about" className="pt-14 lg:pt-28">
       <Typography>
         <>
           In 2015 I decided to learn HTML and CSS. I created my first websites,
