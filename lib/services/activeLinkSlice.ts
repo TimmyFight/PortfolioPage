@@ -4,7 +4,7 @@ type StateType = string;
 
 const activeLinkSlice = createSlice({
   name: "activeLink",
-  initialState: "#about",
+  initialState: window?.location?.hash || "#about",
   reducers: {
     setActiveLink: (state: StateType, action: PayloadAction<StateType>) =>
       action.payload,

@@ -2,20 +2,8 @@
 
 import MenuItem from "../../Atoms/MenuItem/MenuItem";
 import { MAIN_MENU_ITEMS } from "@/constants";
-import { useDispatch } from "react-redux";
-import { setActiveLink } from "@/lib/services/activeLinkSlice";
 
 const Menu = () => {
-  const dispatch = useDispatch();
-
-  if (typeof window !== "undefined") {
-    if (window.location.hash === "") {
-      dispatch(setActiveLink("#about"));
-    } else {
-      dispatch(setActiveLink(`${window.location.hash}`));
-    }
-  }
-
   return (
     <nav
       data-testid="menu"
