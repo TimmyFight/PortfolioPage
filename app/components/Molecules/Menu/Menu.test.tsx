@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import Menu from './Menu';
-import { MAIN_MENU_ITEMS } from '@/constants';
 import '@testing-library/jest-dom';
+
+import { screen } from '@testing-library/react';
+
+import { MAIN_MENU_ITEMS } from '@/constants';
 import { renderWithRedux } from '@/lib/utils/testUtils';
+
+import Menu from './Menu';
 
 describe('Menu', () => {
   it('The Menu rendered with links according to imported constant', () => {

@@ -1,7 +1,7 @@
 import AboutSection from './components/Organisms/AboutSection/AboutSection';
+import ArticlesSection from './components/Organisms/ArticlesSection/ArticlesSection';
 import ExperienceSection from './components/Organisms/ExperienceSection/ExperienceSection';
 import ProjectsSection from './components/Organisms/ProjectsSection/ProjectsSection';
-import ArticlesSection from './components/Organisms/ArticlesSection/ArticlesSection';
 
 export default function Home() {
   return (

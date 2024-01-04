@@ -1,7 +1,8 @@
 'use client';
 
-import MenuItem from '../../Atoms/MenuItem/MenuItem';
 import { MAIN_MENU_ITEMS } from '@/constants';
+
+import MenuItem from '../../Atoms/MenuItem/MenuItem';
 
 const Menu = () => {
   return (

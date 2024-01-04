@@ -1,7 +1,10 @@
-import { screen } from '@testing-library/react';
-import MenuItem from './MenuItem';
 import '@testing-library/jest-dom';
+
+import { screen } from '@testing-library/react';
+
 import { renderWithRedux } from '@/lib/utils/testUtils';
+
+import MenuItem from './MenuItem';
 
 describe('MenuItem', () => {
   const item = {

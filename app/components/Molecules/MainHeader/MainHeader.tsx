@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import Headings from '../../Atoms/Headings/Headings';
 import Typography from '../../Atoms/Typography/Typography';
 

@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import MainHeader from './MainHeader';
 import '@testing-library/jest-dom';
+
+import { render, screen } from '@testing-library/react';
+
+import MainHeader from './MainHeader';
 
 describe('MainHeader', () => {
   it('The MainHeader component is rendered correctly', () => {

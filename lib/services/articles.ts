@@ -1,5 +1,6 @@
 import { createApi, fakeBaseQuery } from "@reduxjs/toolkit/query/react";
 import { collection, getDocs } from "firebase/firestore";
+
 import { db } from "@/firebase/clientApp";
 
 export const articlesApi = createApi({

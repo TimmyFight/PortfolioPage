@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import StrongText from './StrongText';
 import '@testing-library/jest-dom';
+
+import { render, screen } from '@testing-library/react';
+
+import StrongText from './StrongText';
 
 describe('StrongText', () => {
   it('The StrongText rendered with content', () => {

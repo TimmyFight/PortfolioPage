@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import Headings from './Headings';
 import '@testing-library/jest-dom';
+
+import { render, screen } from '@testing-library/react';
+
+import Headings from './Headings';
 
 describe('Headings', () => {
   it('The Headings rendered with default properties', () => {

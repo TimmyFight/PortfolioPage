@@ -1,7 +1,10 @@
-import { screen } from '@testing-library/react';
-import NavBar from './NavBar';
 import '@testing-library/jest-dom';
+
+import { screen } from '@testing-library/react';
+
 import { renderWithRedux } from '@/lib/utils/testUtils';
+
+import NavBar from './NavBar';
 
 describe('NavBar', () => {
   it('The NavBar has been rendered with MainHeader, Menu and SocialFooter', () => {

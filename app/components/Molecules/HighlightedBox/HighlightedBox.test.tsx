@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import HighlightedBox from './HighlightedBox';
 import '@testing-library/jest-dom';
+
+import { render, screen } from '@testing-library/react';
+
+import HighlightedBox from './HighlightedBox';
 
 describe('HighlightedBox', () => {
   it('The HighlightedBox rendered with Titile and Description', () => {

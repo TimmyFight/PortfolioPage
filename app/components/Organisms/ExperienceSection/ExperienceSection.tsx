@@ -1,14 +1,16 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { setActiveLink } from '@/lib/services/activeLinkSlice';
-import { useInView } from 'react-intersection-observer';
-import { useGetExperiencesQuery } from '@/lib/services/experiences';
-import HighlightedBox from '../../Molecules/HighlightedBox/HighlightedBox';
-import Link from 'next/link';
-import Typography from '../../Atoms/Typography/Typography';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import Link from 'next/link';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useDispatch } from 'react-redux';
+
+import { setActiveLink } from '@/lib/services/activeLinkSlice';
+import { useGetExperiencesQuery } from '@/lib/services/experiences';
+
+import Typography from '../../Atoms/Typography/Typography';
+import HighlightedBox from '../../Molecules/HighlightedBox/HighlightedBox';
 
 const ExperienceSection = () => {
   const { data, isLoading } = useGetExperiencesQuery();

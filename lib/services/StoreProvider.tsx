@@ -1,12 +1,13 @@
 "use client";
 
-import { Middleware, configureStore } from "@reduxjs/toolkit";
-import { Provider } from "react-redux";
-import activeLinkReducer from "./activeLinkSlice";
-import { experiencesApi } from "./experiences";
-import { articlesApi } from "./articles";
-import { projectsApi } from "./projects";
+import { configureStore, Middleware } from "@reduxjs/toolkit";
 import { combineReducers } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+
+import activeLinkReducer from "./activeLinkSlice";
+import { articlesApi } from "./articles";
+import { experiencesApi } from "./experiences";
+import { projectsApi } from "./projects";
 
 export interface RootState {
   activeLink: string;

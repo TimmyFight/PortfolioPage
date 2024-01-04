@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import Typography from './Typography';
 import '@testing-library/jest-dom';
+
+import { render, screen } from '@testing-library/react';
+
+import Typography from './Typography';
 
 describe('Typography', () => {
   it('The Typography rendered with default properties', () => {

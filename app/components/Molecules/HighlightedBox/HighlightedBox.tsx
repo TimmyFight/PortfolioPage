@@ -1,7 +1,8 @@
 import Image from 'next/image';
+
+import Chip from '../../Atoms/Chip/Chip';
 import Headings from '../../Atoms/Headings/Headings';
 import Typography from '../../Atoms/Typography/Typography';
-import Chip from '../../Atoms/Chip/Chip';
 
 type HighlightedBoxProperties = Articles & Projects & Experiences;
 

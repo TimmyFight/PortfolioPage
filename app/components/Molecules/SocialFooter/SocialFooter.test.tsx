@@ -1,7 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import SocialFooter from './SocialFooter';
-import { SOCIAL_ITEMS } from '@/constants';
 import '@testing-library/jest-dom';
+
+import { render, screen } from '@testing-library/react';
+
+import { SOCIAL_ITEMS } from '@/constants';
+
+import SocialFooter from './SocialFooter';
 
 describe('MainFooter', () => {
   it('The Social Links are rendered according to imported constant', () => {

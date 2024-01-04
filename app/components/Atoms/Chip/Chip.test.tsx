@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import Chip from './Chip';
 import '@testing-library/jest-dom';
+
+import { render, screen } from '@testing-library/react';
+
+import Chip from './Chip';
 
 describe('Chip', () => {
   it('The Chip rendered', () => {

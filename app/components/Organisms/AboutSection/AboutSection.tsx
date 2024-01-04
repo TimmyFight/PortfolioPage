@@ -1,11 +1,13 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { setActiveLink } from '@/lib/services/activeLinkSlice';
 import { useInView } from 'react-intersection-observer';
-import Typography from '../../Atoms/Typography/Typography';
+import { useDispatch } from 'react-redux';
+
+import { setActiveLink } from '@/lib/services/activeLinkSlice';
+
 import StrongText from '../../Atoms/StrongText/StrongText';
+import Typography from '../../Atoms/Typography/Typography';
 
 const AboutSection = () => {
   const dispatch = useDispatch();
@@ -33,8 +35,10 @@ const AboutSection = () => {
           <StrongText>small family company</StrongText>. There I learned the
           basics of programming. After this short but valuable time, I started
           working for{' '}
-          <StrongText>one of the world's leading beauty companies</StrongText>.
-          Where I implemented a lot of huge features and improvements. Then I
+          <StrongText>
+            one of the world&apos;s leading beauty companies
+          </StrongText>
+          . Where I implemented a lot of huge features and improvements. Then I
           moved to a smaller company where I was able to improve my programming
           skills and was surrounded by a lot of professionals. I was involved in
           different interesting projects, some of them were for example good

@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
-import StoreProvider from "@/lib/services/StoreProvider";
 import { ReactElement } from "react";
+
+import StoreProvider from "@/lib/services/StoreProvider";
 
 export const renderWithRedux = (
   ui: ReactElement,
