@@ -1,20 +1,20 @@
-import { screen } from "@testing-library/react";
-import MenuItem from "./MenuItem";
-import "@testing-library/jest-dom";
-import { renderWithRedux } from "@/lib/utils/testUtils";
+import { screen } from '@testing-library/react';
+import MenuItem from './MenuItem';
+import '@testing-library/jest-dom';
+import { renderWithRedux } from '@/lib/utils/testUtils';
 
-describe("MenuItem", () => {
+describe('MenuItem', () => {
   const item = {
-    name: "About",
-    href: "/#about",
+    name: 'About',
+    href: '/#about',
   };
 
-  it("The MenuItem rendered when other item is active", () => {
+  it('The MenuItem rendered when other item is active', () => {
     renderWithRedux(<MenuItem item={item} />, {
-      initialState: { activeLink: "/#projects" },
+      initialState: { activeLink: '/#projects' },
     });
-    const menuItem = screen.getByTestId("menuItem");
-    expect(menuItem.textContent).toBe("About");
-    expect(menuItem).toHaveClass("text-emerald-700");
+    const menuItem = screen.getByTestId('menuItem');
+    expect(menuItem.textContent).toBe('About');
+    expect(menuItem).toHaveClass('text-emerald-700');
   });
 });

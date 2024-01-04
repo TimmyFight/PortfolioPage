@@ -5,10 +5,13 @@ interface TypographyProperties {
 
 const Typography = ({
   children = <></>,
-  customClass = "",
+  customClass = '',
 }: TypographyProperties) => {
   return (
-    <p data-testid="typography" className={customClass}>
+    <p
+      data-testid="typography"
+      className={customClass}
+    >
       {children}
     </p>
   );

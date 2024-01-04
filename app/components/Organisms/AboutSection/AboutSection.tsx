@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { setActiveLink } from "@/lib/services/activeLinkSlice";
-import { useInView } from "react-intersection-observer";
-import Typography from "../../Atoms/Typography/Typography";
-import StrongText from "../../Atoms/StrongText/StrongText";
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setActiveLink } from '@/lib/services/activeLinkSlice';
+import { useInView } from 'react-intersection-observer';
+import Typography from '../../Atoms/Typography/Typography';
+import StrongText from '../../Atoms/StrongText/StrongText';
 
 const AboutSection = () => {
   const dispatch = useDispatch();
@@ -20,15 +20,19 @@ const AboutSection = () => {
   }, [inView]);
 
   return (
-    <section ref={aboutRef} id="about" className="pt-14 lg:pt-28">
+    <section
+      ref={aboutRef}
+      id="about"
+      className="pt-14 lg:pt-28"
+    >
       <Typography>
         <>
           In 2015 I decided to learn HTML and CSS. I created my first websites,
           it was so exciting for me that I still learn a new frontend frameworks
-          and technologies. I found my first internship in a{" "}
+          and technologies. I found my first internship in a{' '}
           <StrongText>small family company</StrongText>. There I learned the
           basics of programming. After this short but valuable time, I started
-          working for{" "}
+          working for{' '}
           <StrongText>one of the world's leading beauty companies</StrongText>.
           Where I implemented a lot of huge features and improvements. Then I
           moved to a smaller company where I was able to improve my programming
@@ -39,7 +43,7 @@ const AboutSection = () => {
       </Typography>
       <Typography customClass="pt-4">
         <>
-          I am focused on being{" "}
+          I am focused on being{' '}
           <StrongText>profesional frontend developer</StrongText>. I am always
           looking for opportunity to be a <StrongText>Tech Lead</StrongText> on
           the projects and I am able to take responisbility for projects and

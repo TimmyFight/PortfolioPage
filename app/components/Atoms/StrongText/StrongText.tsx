@@ -5,10 +5,13 @@ interface StrongTextProperties {
 
 const StrongText = ({
   children,
-  customClass = "text-neutral-300",
+  customClass = 'text-neutral-300',
 }: StrongTextProperties) => {
   return (
-    <strong data-testid="strongText" className={customClass}>
+    <strong
+      data-testid="strongText"
+      className={customClass}
+    >
       {children}
     </strong>
   );

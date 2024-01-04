@@ -1,4 +1,4 @@
-import Typography from "../Typography/Typography";
+import Typography from '../Typography/Typography';
 
 interface ChipProperties {
   technology: string;
@@ -6,7 +6,10 @@ interface ChipProperties {
 
 const Chip = ({ technology }: ChipProperties) => {
   return (
-    <div data-testid="chip" className="bg-emerald-700 py-1 px-4 rounded-xl">
+    <div
+      data-testid="chip"
+      className="bg-emerald-700 py-1 px-4 rounded-xl"
+    >
       <Typography customClass="text-sm text-neutral-300">
         <>{technology}</>
       </Typography>

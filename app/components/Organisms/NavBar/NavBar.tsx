@@ -1,6 +1,6 @@
-import MainHeader from "../../Molecules/MainHeader/MainHeader";
-import Menu from "../../Molecules/Menu/Menu";
-import SocialFooter from "../../Molecules/SocialFooter/SocialFooter";
+import MainHeader from '../../Molecules/MainHeader/MainHeader';
+import Menu from '../../Molecules/Menu/Menu';
+import SocialFooter from '../../Molecules/SocialFooter/SocialFooter';
 
 const NavBar = () => {
   return (

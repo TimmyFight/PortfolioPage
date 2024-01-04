@@ -7,11 +7,14 @@ interface HeadingsProperties {
 const Headings = ({
   children = <></>,
   level = 1,
-  customClass = "",
+  customClass = '',
 }: HeadingsProperties) => {
   const HeadTag = `h${level}` as keyof JSX.IntrinsicElements;
   return (
-    <HeadTag data-testid="heading" className={customClass}>
+    <HeadTag
+      data-testid="heading"
+      className={customClass}
+    >
       {children}
     </HeadTag>
   );
