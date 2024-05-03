@@ -15,7 +15,8 @@ const ArticlesSection = () => {
 
   const dispatch = useDispatch();
   const [articleRef, inView, entry] = useInView({
-    threshold: 0.4,
+    threshold: 0.8,
+    rootMargin: '10%',
   });
 
   useEffect(() => {

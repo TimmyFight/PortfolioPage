@@ -12,7 +12,8 @@ import Typography from '../../Atoms/Typography/Typography';
 const AboutSection = () => {
   const dispatch = useDispatch();
   const [aboutRef, inView, entry] = useInView({
-    threshold: 0.4,
+    threshold: 0.2,
+    rootMargin: '10%',
   });
 
   useEffect(() => {
